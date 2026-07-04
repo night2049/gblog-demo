@@ -24,6 +24,7 @@
     <script>window.__chrome=fetch((document.documentElement.dataset.root||"./")+"chrome.json").then(function(F){return F.json()}).catch(function(){return null});(function(){var F="theme";function M(){try{return localStorage.getItem(F)}catch(q){return null}}function I(){return M()||"system"}function O(){return window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches}function J(q){return q==="dark"||q!=="light"&&O()}function A(){var q=I(),z=J(q);document.documentElement.classList.toggle("dark",z),document.documentElement.dataset.theme=q;var w=document.querySelector("iframe.giscus-frame");if(w&&w.contentWindow)w.contentWindow.postMessage({giscus:{setConfig:{theme:z?"https://night2049.github.io/gblog-demo/giscus-dark.css":"https://night2049.github.io/gblog-demo/giscus-light.css"}}},"https://giscus.app")}A();function P(){var q=J(I())?"light":"dark";try{localStorage.setItem(F,q)}catch(z){}A()}function L(){var q=location.pathname.split("/").pop()||"index.html",z=document.querySelectorAll(".site-nav a");for(var w=0;w<z.length;w++){var G=(z[w].getAttribute("href")||"").split("/").pop();if(G&&G===q)z[w].setAttribute("aria-current","page")}}function Q(){var q=document.querySelector(".site-header");if(!q)return;var z=window.scrollY||0,w=!1;function G(){w=!1;var B=window.scrollY||0;q.classList.toggle("is-scrolled",B>4);var R=window.matchMedia("(max-width: 767px)").matches;if(!R)q.classList.remove("is-hidden");else if(B<=8||B<z-4)q.classList.remove("is-hidden");else if(B>z+6)q.classList.add("is-hidden");z=B}window.addEventListener("scroll",function(){if(!w)w=!0,requestAnimationFrame(G)},{passive:!0})}if(document.addEventListener("DOMContentLoaded",function(){var q=document.getElementById("theme-toggle");if(q)q.addEventListener("click",P);L(),Q(),A()}),document.addEventListener("chrome:ready",L),window.matchMedia)window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",function(){if(I()==="system")A()});window.addEventListener("message",function(q){if(q.origin==="https://giscus.app"&&q.data&&q.data.giscus)A()})})();</script>
     <!-- app.css 置于内联脚本之后: 内联 kickoff/无闪烁脚本不被样式表加载阻塞 (规范: CSS 后的脚本须等样式表), 确保 fetch 最早发起. -->
     <link rel="stylesheet" href="../app.css" />
+
   </head>
   <body>
     <main class="page">
@@ -80,7 +81,7 @@
       <post-toc></post-toc>
       <div class="prose"><!--content:start--><h1 id="github-flavored-markdown-全格式演示">GitHub Flavored Markdown 全格式演示<a class="heading-anchor" href="#github-flavored-markdown-全格式演示" aria-hidden="true"></a></h1>
 <p>本文覆盖 GitHub Issues / GitHub Flavored Markdown (GFM) 支持的所有格式，供渲染效果参考。</p>
-<hr />
+<hr>
 <h2 id="标题">标题<a class="heading-anchor" href="#标题" aria-hidden="true"></a></h2>
 <h1 id="h1-一级标题">H1 一级标题<a class="heading-anchor" href="#h1-一级标题" aria-hidden="true"></a></h1>
 <h2 id="h2-二级标题">H2 二级标题<a class="heading-anchor" href="#h2-二级标题" aria-hidden="true"></a></h2>
@@ -88,11 +89,11 @@
 <h4 id="h4-四级标题">H4 四级标题<a class="heading-anchor" href="#h4-四级标题" aria-hidden="true"></a></h4>
 <h5 id="h5-五级标题">H5 五级标题<a class="heading-anchor" href="#h5-五级标题" aria-hidden="true"></a></h5>
 <h6 id="h6-六级标题">H6 六级标题<a class="heading-anchor" href="#h6-六级标题" aria-hidden="true"></a></h6>
-<hr />
+<hr>
 <h2 id="文字样式">文字样式<a class="heading-anchor" href="#文字样式" aria-hidden="true"></a></h2>
 <p>普通文本，<strong>粗体</strong>，<em>斜体</em>，<em><strong>粗斜体</strong></em>，<del>删除线</del>，<code>行内代码</code>。</p>
 <p>组合：<strong>粗体里有 <em>斜体</em></strong>，<del>删除里有 <code>代码</code></del>。</p>
-<hr />
+<hr>
 <h2 id="引用">引用<a class="heading-anchor" href="#引用" aria-hidden="true"></a></h2>
 <blockquote>
 <p>单层引用：引用内容可以包含 <strong>格式</strong> 和 <code>代码</code>。</p>
@@ -103,7 +104,7 @@
 </blockquote>
 </blockquote>
 </blockquote>
-<hr />
+<hr>
 <h2 id="列表">列表<a class="heading-anchor" href="#列表" aria-hidden="true"></a></h2>
 <h3 id="无序列表">无序列表<a class="heading-anchor" href="#无序列表" aria-hidden="true"></a></h3>
 <ul>
@@ -133,14 +134,14 @@
 </ol>
 <h3 id="任务列表">任务列表<a class="heading-anchor" href="#任务列表" aria-hidden="true"></a></h3>
 <ul>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled checked>创建私有内容仓</li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled checked>创建公开站点仓</li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled checked>配置 Deploy Key</li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled checked>首次 full 构建</li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled>添加更多文章</li>
-<li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled>配置自定义域名</li>
+<li class="task-list-item">创建私有内容仓</li>
+<li class="task-list-item">创建公开站点仓</li>
+<li class="task-list-item">配置 Deploy Key</li>
+<li class="task-list-item">首次 full 构建</li>
+<li class="task-list-item">添加更多文章</li>
+<li class="task-list-item">配置自定义域名</li>
 </ul>
-<hr />
+<hr>
 <h2 id="代码">代码<a class="heading-anchor" href="#代码" aria-hidden="true"></a></h2>
 <h3 id="行内代码">行内代码<a class="heading-anchor" href="#行内代码" aria-hidden="true"></a></h3>
 <p>执行 <code>bun install</code> 安装依赖，然后运行 <code>bun scripts/build.ts</code> 构建。</p>
@@ -164,22 +165,22 @@ gh repo create my-org/my-blog \
   --<span class="hljs-built_in">clone</span>
 </code></pre>
 <pre><code class="hljs language-json"><span class="hljs-punctuation">{</span>
-  <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gblog-demo&quot;</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">&quot;url&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;https://night2049.github.io/gblog-demo&quot;</span><span class="hljs-punctuation">,</span>
-  <span class="hljs-attr">&quot;author&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;night2049&quot;</span>
+  <span class="hljs-attr">"title"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"gblog-demo"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"url"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"https://night2049.github.io/gblog-demo"</span><span class="hljs-punctuation">,</span>
+  <span class="hljs-attr">"author"</span><span class="hljs-punctuation">:</span> <span class="hljs-string">"night2049"</span>
 <span class="hljs-punctuation">}</span>
 </code></pre>
 <pre><code class="hljs language-python"><span class="hljs-comment"># Python 示例</span>
 <span class="hljs-keyword">def</span> <span class="hljs-title function_">hello</span>(<span class="hljs-params">name: <span class="hljs-built_in">str</span></span>) -&gt; <span class="hljs-built_in">str</span>:
-    <span class="hljs-keyword">return</span> <span class="hljs-string">f&quot;Hello, <span class="hljs-subst">{name}</span>!&quot;</span>
+    <span class="hljs-keyword">return</span> <span class="hljs-string">f"Hello, <span class="hljs-subst">{name}</span>!"</span>
 
-<span class="hljs-built_in">print</span>(hello(<span class="hljs-string">&quot;gblog&quot;</span>))
+<span class="hljs-built_in">print</span>(hello(<span class="hljs-string">"gblog"</span>))
 </code></pre>
-<pre><code class="hljs language-diff"><span class="hljs-deletion">- const old = &quot;before&quot;</span>
-<span class="hljs-addition">+ const new = &quot;after&quot;</span>
-  const unchanged = &quot;same&quot;
+<pre><code class="hljs language-diff"><span class="hljs-deletion">- const old = "before"</span>
+<span class="hljs-addition">+ const new = "after"</span>
+  const unchanged = "same"
 </code></pre>
-<hr />
+<hr>
 <h2 id="表格">表格<a class="heading-anchor" href="#表格" aria-hidden="true"></a></h2>
 <table>
 <thead>
@@ -193,7 +194,7 @@ gh repo create my-org/my-blog \
 </tbody>
 </table>
 <p>表格内也支持 <strong>粗体</strong>、<em>斜体</em>、<code>代码</code>。</p>
-<hr />
+<hr>
 <h2 id="链接与图片">链接与图片<a class="heading-anchor" href="#链接与图片" aria-hidden="true"></a></h2>
 <h3 id="链接">链接<a class="heading-anchor" href="#链接" aria-hidden="true"></a></h3>
 <ul>
@@ -202,20 +203,20 @@ gh repo create my-org/my-blog \
 <li>裸 URL 自动转链接：https://github.com/night2049</li>
 </ul>
 <h3 id="图片">图片<a class="heading-anchor" href="#图片" aria-hidden="true"></a></h3>
-<p><img decoding="async" width="560" height="560" src="I_kwDOTKCxoM8AAAABHQDKRQ/feef95b70a3c3262.webp" alt="GitHub Logo" /></p>
+<p><img decoding="async" src="I_kwDOTKCxoM8AAAABHQDKRQ/feef95b70a3c3262.webp" alt="GitHub Logo"></p>
 <p>带链接的图片：</p>
-<p><a href="https://github.com"><img decoding="async" loading="lazy" width="560" height="560" src="I_kwDOTKCxoM8AAAABHQDKRQ/feef95b70a3c3262.webp" alt="GitHub" /></a></p>
-<hr />
+<p><a href="https://github.com"><img decoding="async" loading="lazy" src="I_kwDOTKCxoM8AAAABHQDKRQ/feef95b70a3c3262.webp" alt="GitHub"></a></p>
+<hr>
 <h2 id="分隔线">分隔线<a class="heading-anchor" href="#分隔线" aria-hidden="true"></a></h2>
 <p>三种写法效果相同：</p>
-<hr />
-<hr />
-<hr />
-<hr />
+<hr>
+<hr>
+<hr>
+<hr>
 <h2 id="脚注">脚注<a class="heading-anchor" href="#脚注" aria-hidden="true"></a></h2>
 <p>这里有一个脚注<a href="%E8%BF%99%E6%98%AF%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%84%9A%E6%B3%A8%E7%9A%84%E5%86%85%E5%AE%B9%E3%80%82">^1</a>，还有另一个[^note]。</p>
 <p>[^note]: 这是命名脚注的内容，支持 <strong>格式</strong>。</p>
-<hr />
+<hr>
 <h2 id="alertsgithub-专属提示块">Alerts（GitHub 专属提示块）<a class="heading-anchor" href="#alertsgithub-专属提示块" aria-hidden="true"></a></h2>
 <blockquote>
 <p>[!NOTE]
@@ -237,7 +238,7 @@ gh repo create my-org/my-blog \
 <p>[!CAUTION]
 危险操作：潜在的负面后果，请谨慎。</p>
 </blockquote>
-<hr />
+<hr>
 <h2 id="折叠块">折叠块<a class="heading-anchor" href="#折叠块" aria-hidden="true"></a></h2>
 <details>
 <summary>点击展开查看详情</summary>
@@ -247,7 +248,7 @@ gh repo create my-org/my-blog \
 <li><strong>粗体</strong></li>
 <li><code>代码</code></li>
 </ul>
-<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> hidden = <span class="hljs-string">&quot;只有展开才能看到&quot;</span>;
+<pre><code class="hljs language-typescript"><span class="hljs-keyword">const</span> hidden = <span class="hljs-string">"只有展开才能看到"</span>;
 </code></pre>
 </details>
 <details>
@@ -258,13 +259,13 @@ gh repo create my-org/my-blog \
 <li>安装依赖：<code>bun install</code></li>
 </ol>
 </details>
-<hr />
+<hr>
 <h2 id="数学公式">数学公式<a class="heading-anchor" href="#数学公式" aria-hidden="true"></a></h2>
-<p>行内公式：质能方程 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>，欧拉公式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>π</mi></mrow></msup><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">e^{i\pi} + 1 = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.908em;vertical-align:-0.0833em;"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8247em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.0359em;">iπ</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>。</p>
+<p>行内公式：质能方程 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"></span><span class="mord mathnormal">E</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">m</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span>，欧拉公式 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>π</mi></mrow></msup><mo>+</mo><mn>1</mn><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">e^{i\pi} + 1 = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"></span><span class="mord"><span class="mord mathnormal">e</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">iπ</span></span></span></span></span></span></span></span></span><span class="mspace"></span><span class="mbin">+</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">1</span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord">0</span></span></span></span>。</p>
 <p>块级公式：</p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo fence="true">(</mo><msubsup><mo>∫</mo><mi>a</mi><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>d</mi><mi>t</mi><mo fence="true">)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{d}{dx}\left(\int_{a}^{x} f(t)\,dt\right) = f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.4em;vertical-align:-0.95em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mop"><span class="mop op-symbol large-op" style="margin-right:0.4445em;position:relative;top:-0.0011em;">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4143em;"><span style="top:-1.7881em;margin-left:-0.4445em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span style="top:-3.8129em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9119em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.1076em;">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
-<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.9185em;vertical-align:-1.2671em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8829em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.2671em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3214em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7401em;"><span style="top:-2.989em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:2.1771em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">6</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathnormal" style="margin-right:0.0359em;">π</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<hr />
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>x</mi></mrow></mfrac><mrow><mo fence="true">(</mo><msubsup><mo>∫</mo><mi>a</mi><mi>x</mi></msubsup><mi>f</mi><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo><mtext> </mtext><mi>d</mi><mi>t</mi><mo fence="true">)</mo></mrow><mo>=</mo><mi>f</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\frac{d}{dx}\left(\int_{a}^{x} f(t)\,dt\right) = f(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="mord"><span class="mord mathnormal">d</span><span class="mord mathnormal">x</span></span></span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span><span class="mord"><span class="mord mathnormal">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="minner"><span class="mopen delimcenter"><span class="delimsizing size3">(</span></span><span class="mop"><span class="mop op-symbol large-op">∫</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span></span></span></span><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">x</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span></span><span class="mspace"></span><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">t</span><span class="mclose">)</span><span class="mspace"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">t</span><span class="mclose delimcenter"><span class="delimsizing size3">)</span></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord mathnormal">f</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi>∞</mi></munderover><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo>=</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\sum_{n=1}^{\infty} \frac{1}{n^2} = \frac{\pi^2}{6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span><span class="pstrut"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">∞</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mspace"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="mord"><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace"></span><span class="mrel">=</span><span class="mspace"></span></span><span class="base"><span class="strut"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="mord"><span class="mord">6</span></span></span><span><span class="pstrut"></span><span class="frac-line"></span></span><span><span class="pstrut"></span><span class="mord"><span class="mord"><span class="mord mathnormal">π</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist"><span><span class="pstrut"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<hr>
 <h2 id="mermaid-流程图">Mermaid 流程图<a class="heading-anchor" href="#mermaid-流程图" aria-hidden="true"></a></h2>
 <pre><code class="hljs language-mermaid">flowchart LR
     A[内容仓 Issues/MD] --&gt;|<span class="hljs-type">GitHub</span> Actions 构建| <span class="hljs-type">B</span>[站点仓 产物]
@@ -284,23 +285,23 @@ gh repo create my-org/my-blog \
     S-&gt;&gt;P: 自动部署
     P--&gt;&gt;W: 站点上线
 </code></pre>
-<hr />
+<hr>
 <h2 id="emoji">Emoji<a class="heading-anchor" href="#emoji" aria-hidden="true"></a></h2>
 <p>:rocket: 发布上线　:sparkles: 新功能　:bug: 修复 bug　:memo: 文档更新</p>
 <p>:white_check_mark: 已完成　:x: 失败　:warning: 警告　:bulb: 提示</p>
-<hr />
+<hr>
 <h2 id="htmlgithub-支持的子集">HTML（GitHub 支持的子集）<a class="heading-anchor" href="#htmlgithub-支持的子集" aria-hidden="true"></a></h2>
 <p><kbd>Ctrl</kbd> + <kbd>C</kbd> 复制，<kbd>Ctrl</kbd> + <kbd>V</kbd> 粘贴。</p>
 <p>颜色标注（仅 README 支持，Issues 会降级）：</p>
 <p>文字上下标：H<sub>2</sub>O，X<sup>2</sup> + Y<sup>2</sup> = Z<sup>2</sup>。</p>
 <p><ins>下划线文字</ins>（部分场景支持）。</p>
-<hr />
+<hr>
 <h2 id="引用代码与提交">引用代码与提交<a class="heading-anchor" href="#引用代码与提交" aria-hidden="true"></a></h2>
 <p>Issues 里可以直接引用行号范围、PR、提交 SHA，GitHub 会自动渲染为卡片（本文为示范故写成代码块形式）：</p>
 <pre><code class="hljs">night2049/<span class="hljs-selector-tag">g</span>-blog<span class="hljs-selector-id">#1</span>
 night2049/<span class="hljs-selector-tag">g</span>-blog<span class="hljs-keyword">@a550b43</span>
 </code></pre>
-<hr />
+<hr>
 <p><em>本文由 gblog-demo 自动部署演示，覆盖 GFM 全部常用格式。</em></p>
 <!--content:end--></div>
     </article>
