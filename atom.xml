@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://night2049.github.io/gblog-demo</id>
     <title>gblog-demo</title>
-    <updated>2026-07-01T01:17:59.000Z</updated>
+    <updated>2026-07-04T18:58:50.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <author>
         <name>night2049</name>
@@ -10,6 +10,13 @@
     <link rel="alternate" href="https://night2049.github.io/gblog-demo"/>
     <subtitle>A static blog built from GitHub Issues and local Markdown</subtitle>
     <rights>night2049</rights>
+    <entry>
+        <title type="html"><![CDATA[gblog private attachment verification 2026-07-05]]></title>
+        <id>https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHrXmTQ.html</id>
+        <link href="https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHrXmTQ.html"/>
+        <updated>2026-07-04T18:58:50.000Z</updated>
+        <summary type="html"><![CDATA[gblog private attachment verification]]></summary>
+    </entry>
     <entry>
         <title type="html"><![CDATA[GitHub Flavored Markdown 全格式演示]]></title>
         <id>https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHQDKRQ.html</id>
