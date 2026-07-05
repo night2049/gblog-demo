@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>gblog-demo</title>
-        <link>https://night2049.github.io/gblog-demo</link>
+        <title>My Blog</title>
+        <link>https://your-name.github.io/your-site</link>
         <description>A static blog built from GitHub Issues and local Markdown</description>
-        <lastBuildDate>Wed, 01 Jul 2026 01:17:59 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 01 Jun 2026 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>zh-CN</language>
-        <copyright>night2049</copyright>
+        <copyright>Your Name</copyright>
         <item>
-            <title><![CDATA[GitHub Flavored Markdown 全格式演示]]></title>
-            <link>https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHQDKRQ.html</link>
-            <guid isPermaLink="false">https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHQDKRQ.html</guid>
-            <pubDate>Wed, 01 Jul 2026 01:17:59 GMT</pubDate>
-            <description><![CDATA[GitHub Flavored Markdown 全格式演示 本文覆盖 GitHub Issues / GitHub Flavored Markdown (GFM) 支持的所有格式，供渲染效果参考。 标题 H1 一级标题 H2 二级标题 H3 三级标题 H4 四级标题 H5 五级标题 H6 六级标题 文字样式 普通文本， 粗体 ， 斜体 ， 粗斜体 ， 删除线 ， 行内代码 。 组合： 粗体里有 斜体 ， 删除里有 代码 。 引用 单层引用：引用内容可以包含 格式 和 代码 。 嵌套引用（二层）。 嵌套引…]]></description>
-        </item>
-        <item>
-            <title><![CDATA[本地 Markdown 验证文章]]></title>
-            <link>https://night2049.github.io/gblog-demo/post/f64173d4d28189f56fbc907f8c97bb17.html</link>
-            <guid isPermaLink="false">https://night2049.github.io/gblog-demo/post/f64173d4d28189f56fbc907f8c97bb17.html</guid>
-            <pubDate>Wed, 01 Jul 2026 00:00:00 GMT</pubDate>
-            <description><![CDATA[本地 Markdown 验证文章 这是通过本地 Markdown 文件发布的验证文章。 功能验证 本地 md 文章解析正常 incrementalLocal 构建触发 Front Matter 正确读取 部署时间：2026-07-01]]></description>
+            <title><![CDATA[Fixture 示例文章 (多格式验证)]]></title>
+            <link>https://your-name.github.io/your-site/post/I_fixture001.html</link>
+            <guid isPermaLink="false">https://your-name.github.io/your-site/post/I_fixture001.html</guid>
+            <pubDate>Mon, 01 Jun 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[标题一 H1 段落含 加粗 、 斜体 、 行内代码 与 链接 。 标题二 H2 无序项一 无序项二 嵌套项 有序项一 有序项二 已完成任务 未完成任务 这是一段引用 blockquote。 列 A 列 B 单元 1 单元 2 单元 3 单元 4 代码块 (含特殊字符) const cmp = ( a : number , b : number ) => a < b && b > 0 ; const s = "x & y" ; 无语言代码块: plain text 结尾段落。]]></description>
         </item>
     </channel>
 </rss>
