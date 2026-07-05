@@ -1,1 +1,0 @@
-[{"url":"post/db5b8ce53c9eecf435e7887b9afa7d5e.html","title":"自定义 contentDir workflow 验收","date":"2026-07-05T00:00:00.000Z","tags":["验证","workflow"],"dirs":["验证"],"summary":"自定义 contentDir workflow 验收 这篇文章用于验证 config/build.json 中自定义 contentDir 后，push 能触发 GitHub Actions 构建。","cover":"","readingTime":1,"words":32}]

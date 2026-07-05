@@ -8,18 +8,18 @@
     },
     "items": [
         {
-            "id": "https://night2049.github.io/gblog-demo/post/db5b8ce53c9eecf435e7887b9afa7d5e.html",
-            "content_html": "自定义 contentDir workflow 验收 这篇文章用于验证 config/build.json 中自定义 contentDir 后，push 能触发 GitHub Actions 构建。",
-            "url": "https://night2049.github.io/gblog-demo/post/db5b8ce53c9eecf435e7887b9afa7d5e.html",
-            "title": "自定义 contentDir workflow 验收",
-            "date_modified": "2026-07-05T00:00:00.000Z"
-        },
-        {
             "id": "https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHQDKRQ.html",
             "content_html": "GitHub Flavored Markdown 全格式演示 本文覆盖 GitHub Issues / GitHub Flavored Markdown (GFM) 支持的所有格式，供渲染效果参考。 标题 H1 一级标题 H2 二级标题 H3 三级标题 H4 四级标题 H5 五级标题 H6 六级标题 文字样式 普通文本， 粗体 ， 斜体 ， 粗斜体 ， 删除线 ， 行内代码 。 组合： 粗体里有 斜体 ， 删除里有 代码 。 引用 单层引用：引用内容可以包含 格式 和 代码 。 嵌套引用（二层）。 嵌套引…",
             "url": "https://night2049.github.io/gblog-demo/post/I_kwDOTKCxoM8AAAABHQDKRQ.html",
             "title": "GitHub Flavored Markdown 全格式演示",
             "date_modified": "2026-07-01T01:17:59.000Z"
+        },
+        {
+            "id": "https://night2049.github.io/gblog-demo/post/f64173d4d28189f56fbc907f8c97bb17.html",
+            "content_html": "本地 Markdown 验证文章 这是通过本地 Markdown 文件发布的验证文章。 功能验证 本地 md 文章解析正常 incrementalLocal 构建触发 Front Matter 正确读取 部署时间：2026-07-01",
+            "url": "https://night2049.github.io/gblog-demo/post/f64173d4d28189f56fbc907f8c97bb17.html",
+            "title": "本地 Markdown 验证文章",
+            "date_modified": "2026-07-01T00:00:00.000Z"
         }
     ]
 }
